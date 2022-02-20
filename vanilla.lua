@@ -15,8 +15,8 @@ function vanilla:init(aspect_width, aspect_height, settings)
     self.aspect_height = aspect_height
     
     self.scale = nil
-    self.canvas = love.graphics.newCanvas(aspect_width, aspect_height, settings)
     self.last_canvas = nil
+    self.canvas = love.graphics.newCanvas(aspect_width, aspect_height, settings)
 
     self:resize_canvas()
 end
