@@ -1,10 +1,7 @@
 local function get_screen_scale(w, h, scr_w, scr_h)
     local scr_w, scr_h = scr_w or love.graphics.getWidth(), scr_h or love.graphics.getHeight()
-    local scale_x = scr_w / w
-    local scale_y = scr_h / h
-    local smaller_scale = scale_x < scale_y and scale_x or scale_y
-
-    return smaller_scale
+    
+    return math.min(scr_w / w, scr_h / h)
 end
 
 local vanilla = {}
