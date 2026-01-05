@@ -15,7 +15,7 @@ function vanilla:init(width, height, settings)
     self.last_canvas = nil
     self.canvas = love.graphics.newCanvas(width, height, settings)
 
-    self:resize_canvas()
+    self:resize()
 end
 
 function vanilla:draw(callback)
@@ -54,4 +54,5 @@ return {
         return inst
     end
 }
+
 
