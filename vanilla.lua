@@ -18,12 +18,13 @@ function vanilla:init(width, height, settings)
     self:resize()
 end
 
-function vanilla:draw(callback)
+function vanilla:draw(callback, ...)
     self.last_canvas = love.graphics.getCanvas()
 
     love.graphics.setCanvas(self.canvas)
         love.graphics.clear()
-        callback()
+
+        callback(...)
     love.graphics.setCanvas(self.last_canvas)
 
     local w, h = love.graphics.getDimensions()
@@ -54,5 +55,3 @@ return {
         return inst
     end
 }
-
-
